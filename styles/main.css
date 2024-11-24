@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+:root {
+    --f-all: "Parkinsans", serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--f-all);
+}
+
+body {
+    background-color: rgb(13,13,13);
+}
+
+/* GAME CONTAINER */
+
+.game-container {
+    padding-block: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 50px;
+}
+
+/* TTT GAME */
+
+.ttt-game {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1px;
+    background-color: white;
+}
+
+/* TTT GAME BOX */
+
+.ttt-game-box {
+    background-color: rgb(13,13,13);
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    font-size: 6rem;
+}
+
+/* TTT GAME TURN */
+
+.ttt-game-turn {
+    color: white;
+    font-size: 2rem;
+}
