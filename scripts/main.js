@@ -1,4 +1,4 @@
-const tttGameButtons = document.querySelectorAll('.ttt-game-box');
+/* const tttGameButtons = document.querySelectorAll('.ttt-game-box');
 const turnText = document.querySelector('.ttt-game-turn');
 const playerOne = 'X';
 const playerOnePosition = [];
@@ -44,4 +44,18 @@ function checkingWinningCondition() {
             console.log('Keep going');
         };
     };
+}; */
+
+const select = document.getElementById('select');
+const players = ['PlayerOne', 'PlayerTwo', 'PlayerThree'];
+
+function handleOptions(options) {
+    let stringHTML = '<option value="">Please select</option>';
+    options.forEach(option => {
+    
+    stringHTML += `<option value="${option.toLowerCase()}">${option}</option>`; 
+    });
+    return stringHTML;
 };
+
+select.insertAdjacentHTML("beforeend", handleOptions(players));
